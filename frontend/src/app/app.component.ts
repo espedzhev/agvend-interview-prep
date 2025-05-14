@@ -18,6 +18,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getRoot().subscribe(data => this.msg = data.message);
-    console.log('response', this.msg)
   }
 }

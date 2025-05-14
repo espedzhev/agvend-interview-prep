@@ -13,11 +13,7 @@ export class ApiService {
     return this.http.get<any>(`${this.apiUrl}`);
   }
 
-  getData(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/your-fastapi-endpoint`);
-  }
-
-  postData(data: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/your-fastapi-endpoint`, data);
+  concatenate(data: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/concatenate`, data);
   }
 }

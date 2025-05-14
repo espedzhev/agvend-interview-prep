@@ -1,1 +1,27 @@
-<p>examples-page works!</p>
+<h2>Pairwise Concat Example (with Signals)</h2>
+
+<label for="listA">List A (comma-separated):</label>
+<input
+  id="listA"
+  [value]="listAInput()"
+  (input)="updateListAInput($event)"
+/>
+
+<label for="listB">List B (comma-separated):</label>
+<input
+  id="listB"
+  [value]="listBInput()"
+  (input)="updateListBInput($event)"
+/>
+
+<br /><br />
+<button (click)="submit()">Submit to Backend</button>
+
+<hr />
+
+<div *ngIf="result().length > 0">
+  <h3>Result:</h3>
+  <ul>
+    <li *ngFor="let item of result()">{{ item }}</li>
+  </ul>
+</div>
