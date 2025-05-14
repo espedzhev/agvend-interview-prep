@@ -1,10 +1,10 @@
-<h1>{{ msg }}</h1>
+<div class="container my-4">
+  <h1 class="display-4 text-black-50">{{ msg }}</h1>
 
-<nav>
-  <a routerLink="/examples" routerLinkActive="active">Examples Page</a>
-  <a routerLink="/interview" routerLinkActive="active">Interview Page</a>
-</nav>
+  <nav class="nav nav-pills mb-3">
+    <a class="nav-link" routerLink="/examples" routerLinkActive="active">Examples Page</a>
+    <a class="nav-link" routerLink="/interview" routerLinkActive="active">Interview Page</a>
+  </nav>
 
-<hr>
-
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</div>

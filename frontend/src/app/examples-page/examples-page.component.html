@@ -1,27 +1,26 @@
-<h2>Pairwise Concat Example (with Signals)</h2>
+<div class="card shadow p-4">
+  <h2 class="card-title mb-3">Pairwise Concat Example</h2>
 
-<label for="listA">List A (comma-separated):</label>
-<input
-  id="listA"
-  [value]="listAInput()"
-  (input)="updateListAInput($event)"
-/>
+  <div class="mb-3">
+    <label for="listA" class="form-label">List A (comma-separated)</label>
+    <input type="text" class="form-control" id="listA"
+      [value]="listAInput()" (input)="updateListAInput($event)">
+  </div>
 
-<label for="listB">List B (comma-separated):</label>
-<input
-  id="listB"
-  [value]="listBInput()"
-  (input)="updateListBInput($event)"
-/>
+  <div class="mb-3">
+    <label for="listB" class="form-label">List B (comma-separated)</label>
+    <input type="text" class="form-control" id="listB"
+      [value]="listBInput()" (input)="updateListBInput($event)">
+  </div>
 
-<br /><br />
-<button (click)="submit()">Submit to Backend</button>
+  <button class="btn btn-primary" (click)="submit()">Submit</button>
 
-<hr />
-
-<div *ngIf="result().length > 0">
-  <h3>Result:</h3>
-  <ul>
-    <li *ngFor="let item of result()">{{ item }}</li>
-  </ul>
+  <div *ngIf="result().length > 0" class="mt-4">
+    <h3>Result:</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of result()">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
 </div>
