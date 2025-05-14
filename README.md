@@ -3,3 +3,4 @@ Interview preparation
 
 To start the server run
 `uvicorn app.main:app --reload`
+`ng serve`
