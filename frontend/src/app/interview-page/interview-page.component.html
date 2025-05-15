@@ -4,7 +4,14 @@
     <hr />
 
     <div class="mb-4">
-      <h5>ASD</h5>
+      <input type="text" class="form-control input-group mb-4" [value]="querySearch()" (input)="onSearchInput($event)">
+
+      <div class="table-responsive">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of filteredList()">
+          {{ item }}
+        </li>
+      </ul>
     </div>
   </div>
 </div>
